@@ -12,7 +12,7 @@ render_surface = pygame.Surface((RES_WIDTH, RES_HEIGHT))
 clock = pygame.time.Clock()
 running = True
 G = 6.67430 * 10 ** -11
-MIN_DISTANCE = 50
+MIN_DISTANCE = 40
 
 
 class Body:
@@ -66,7 +66,7 @@ def initialize_random_bodies(num_bodies, screen_width, screen_height, mass_range
 def main():
     global running
     num_bodies = 3
-    mass_range = (10**18, 10**18)
+    mass_range = (10**17.5, 10**17.5)
     velocity_range = (-0.05, 0.05)
     bodies = initialize_random_bodies(
         num_bodies, RES_WIDTH, RES_HEIGHT, mass_range, velocity_range)
