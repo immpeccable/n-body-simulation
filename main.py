@@ -12,7 +12,7 @@ render_surface = pygame.Surface((RES_WIDTH, RES_HEIGHT))
 clock = pygame.time.Clock()
 running = True
 G = 6.67430 * 10 ** -11
-MIN_DISTANCE = 40
+MIN_DISTANCE = 50
 
 
 class Body:
@@ -87,7 +87,7 @@ def main():
                 if i != j:
                     forces[i] += calculate_force(body1, body2)
 
-        dt = clock.tick(120) / 1000
+        dt = clock.tick(360) / 1000
 
         for body in bodies:
             body.apply_force(forces[bodies.index(body)], dt)
